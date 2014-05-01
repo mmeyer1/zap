@@ -26,3 +26,9 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Ruby on Rails Dummy App
+
+This is a dummy testbed app for me to learn Rails. I already know some basics, but I wanted a public hosted/deployed test app to try some real magic on. 
+
+Will add: Devise integration w/ SSO with FB next
