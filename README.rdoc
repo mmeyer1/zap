@@ -4,6 +4,8 @@
 Rails 4.0
 Ruby 2.0.0 p195
 
-This is a dummy testbed app for me to learn Rails. I already know some basics, but I wanted a public hosted/deployed test app to try some real magic on. 
+This started as a basic dummy testbed app for me to learn Rails. I already know some basics, but I wanted a public hosted/deployed test app to try some real magic on. I now have a coherent goal for a first "real" app (besides the blog/twitter things everyone builds to start with)
 
-Will add: Devise integration w/ SSO with FB next
+Basic devise integration complete. 
+
+Goal is to make an online painting journal for miniature hobbyists: upload a photo of that great figure you just painted and label the colors you used so 6 months from now when you decide to do another unit of really l33t Space Marines you don't waste time trying to figure out how the eff you got that really cool color effect :) 
