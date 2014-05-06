@@ -40,6 +40,9 @@ group :production do
     gem 'rails_12factor', '0.0.2'
 end
 
+# Use Devise for user sign-on/account management 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
