@@ -1,41 +1,48 @@
 class UnitsController < ApplicationController
+    before_action :authenticate_user!
 def new
     @unit = Unit.new
 end
 
 def create
-    @unit = Unit.new(unit_params)
+    @unit = current_user.units.new(unit_params)
     
     if @unit.save
     redirect_to @unit
     else
+    flash[:alert]
     render 'new'
     end
 end 
 
 def show
-    @unit = Unit.find(params[:id])
+    @unit = current_user.units.find(params[:id])
 end 
 
 def edit 
-@unit = Unit.find(params[:id])
+@unit = current_user.units.find(params[:id])
 end
 
 def update 
-@unit = Unit.find(params[:id])
+@unit = current_user.units.find(params[:id])
 
 if @unit.update(unit_params)
     redirect_to @unit
 else
+    flash[:alert]
     render 'edit'
 end
 end
 
+def index
+@units = current_user.units.all
+end
+
 def destroy
-@unit = Unit.find(params[:id])
+@unit = current_user.units.find(params[:id])
 @unit.destroy
 
-redirect_to welcome_index_path
+render 'index'
 end
     private
     # Strong parameters

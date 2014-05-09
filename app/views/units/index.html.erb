@@ -1,0 +1,13 @@
+<h1> Your Units </h1> 
+<table> 
+<tr>
+    <th> Name </th> 
+    <th> Description </th> 
+</tr>
+<%= @units.each do |unit| %> 
+<tr>
+<td><%= link_to unit.name, edit_unit_path(unit) %></td>
+<td><%= unit.descr %></td>
+</tr>
+<% end %>
+</table>
