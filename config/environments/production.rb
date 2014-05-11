@@ -9,9 +9,9 @@ Zap::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-      :bucket => 'zapunits',
-    :access_key_id => 'AKIAIP2CSTA566KIK5SA',
-    :secret_access_key => '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'
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
 
