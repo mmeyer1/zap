@@ -5,8 +5,9 @@
     <th> Description </th> 
 </tr>
 <% if @units then%>
-<%= @units.each do |unit| %> 
+<% @units.each do |unit| %> 
 <tr>
+<td><%= image_tag unit.photo.url(:thumb) %> </td>
 <td><%= link_to unit.name, edit_unit_path(unit) %></td>
 <td><%= unit.descr %></td>
 </tr>

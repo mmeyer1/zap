@@ -12,9 +12,9 @@ Zap::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['testzapunits'],
-    :access_key_id => ENV['AKIAIP2CSTA566KIK5SA'],
-    :secret_access_key => ENV['riIBH6Edwak0hvxOT8QrHchMg2I3D23QA5v2HGs']
+      :bucket => 'testzapunits',
+    :access_key_id => 'AKIAIP2CSTA566KIK5SA',
+    :secret_access_key => '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'
   }
 }
 
