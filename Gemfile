@@ -8,6 +8,8 @@ gem 'rails', '4.0.3'
 gem 'paperclip', "~> 3.5.3"
 gem 'aws-sdk'
 
+# Foundation for styling
+gem 'zurb-foundation'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do 
