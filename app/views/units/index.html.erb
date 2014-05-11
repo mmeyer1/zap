@@ -4,10 +4,14 @@
     <th> Name </th> 
     <th> Description </th> 
 </tr>
+<% if @units then%>
 <%= @units.each do |unit| %> 
 <tr>
 <td><%= link_to unit.name, edit_unit_path(unit) %></td>
 <td><%= unit.descr %></td>
 </tr>
 <% end %>
+<% else %> 
+You don't seem to have any units to show
+<% end %> 
 </table>

@@ -6,6 +6,17 @@ Zap::Application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+# Test bucket
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+      :bucket => 'testzapunits',
+    :access_key_id => 'AKIAIP2CSTA566KIK5SA',
+    :secret_access_key => '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'
+  }
+}
+Paperclip.options[:command_path] = "/c/Program Files (x86)/ImageMagick-6.8.9-Q16/identify"
+Paperclip.options[:bucket] = 'testzapunits'
   # Do not eager load code on boot.
   config.eager_load = false
 

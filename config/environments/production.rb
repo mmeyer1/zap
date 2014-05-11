@@ -4,6 +4,16 @@ Zap::Application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  # Config for AWS integration
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['zapunits'],
+    :access_key_id => ENV['AKIAIP2CSTA566KIK5SA'],
+    :secret_access_key => ENV['riIBH6Edwak0hvxOT8QrHchMg2I3D23QA5v2HGs']
+  }
+}
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.

@@ -7,6 +7,17 @@ Zap::Application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
+
+# Test bucket
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['testzapunits'],
+    :access_key_id => ENV['AKIAIP2CSTA566KIK5SA'],
+    :secret_access_key => ENV['riIBH6Edwak0hvxOT8QrHchMg2I3D23QA5v2HGs']
+  }
+}
+
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.

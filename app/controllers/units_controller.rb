@@ -47,6 +47,6 @@ end
     private
     # Strong parameters
     def unit_params
-        params.require(:unit).permit(:name, :descr)
+        params.require(:unit).permit(:name, :descr, :photo)
     end
 end
