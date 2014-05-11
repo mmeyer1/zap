@@ -9,9 +9,9 @@ Zap::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-      :bucket => 'zapunits',
-    :access_key_id => 'AKIAIP2CSTA566KIK5SA',
-    :secret_access_key => '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'
+      :bucket => '**REMOVED**',
+    :access_key_id => '**REMOVED**',
+    :secret_access_key => '/**REMOVED**'
   }
 }
 
