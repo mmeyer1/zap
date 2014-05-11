@@ -42,7 +42,7 @@ def destroy
 @unit = current_user.units.find(params[:id])
 @unit.destroy
 
-render 'index'
+redirect_to units_path
 end
     private
     # Strong parameters
