@@ -10,7 +10,7 @@
 <td><%= image_tag unit.photo.url(:thumb) %> </td>
 <td><%= link_to unit.name, edit_unit_path(unit) %></td>
 <td><%= unit.descr %></td>
-<td><%= link_to 'Destroy This Unit', unit_path(unit), method: :delete, data: {confirm: 'Really delete?'} %> </td>
+<td><%= link_to 'Destroy This Unit', unit_delete_path(unit), remote: true%> </td>
 </tr>
 <% end %>
 <% else %> 
