@@ -7,9 +7,7 @@ Zap::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-resources :units do
-  get "delete"
-end 
+resources :units 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
