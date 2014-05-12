@@ -1,12 +1,25 @@
 
-# Ruby on Rails Dummy App
+Version Info
 
 Rails 4.0
 Ruby 2.0.0 p195
 
 This started as a basic dummy testbed app for me to learn Rails. I already know some basics, but I wanted a public hosted/deployed test app to try some real magic on. I now have a coherent goal for a first "real" app (besides the blog/twitter things everyone builds to start with)
 
+Completed Benchmarks:
 Basic devise integration complete.
-Units now belong to users 
+Units now belong to users.
+AWS Integration complete. You can now post photos which are served from AWS for maximum speed. I will configure setting up a default image
+later. 
+Basic styling added with Foundation. 
+
+Next Goal: 
+Add a persistent navbar/some AJAX for basic actions (particularly on the unit index page). 
+
+Future:
+Create the Paint resource, Paint will be an open source library of known paint colors, I'd like to seed it somehow with data
+on the basic GW/Vallejo/P3 ranges but leave functionality for users to add new colors. Will be associated to units through a join 
+table with a one to many relationship. 
+Integrate social media sharing for units. 
 
 Goal is to make an online painting journal for miniature hobbyists: upload a photo of that great figure you just painted and label the colors you used so 6 months from now when you decide to do another unit of really l33t Space Marines you don't waste time trying to figure out how the eff you got that really cool color effect :) 
