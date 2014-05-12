@@ -21,5 +21,10 @@ Create the Paint resource, Paint will be an open source library of known paint c
 on the basic GW/Vallejo/P3 ranges but leave functionality for users to add new colors. Will be associated to units through a join 
 table with a one to many relationship. 
 Integrate social media sharing for units. 
+Would like to EVENTUALLY use Rmagick to read the RGB colors from the unit, then match possible paint colors to the unit 
+(idealy as an "on mouseover" event on the unit itself, so you can mouseover the guys arm and get a list of potential colors that
+might match that original color and give you the option to define explicitly what it is). 
 
 Goal is to make an online painting journal for miniature hobbyists: upload a photo of that great figure you just painted and label the colors you used so 6 months from now when you decide to do another unit of really l33t Space Marines you don't waste time trying to figure out how the eff you got that really cool color effect :) 
+I'd also like to implement functionality to post a photo of a miniature and "discover" potential color matches for it, so you can
+duplicate the colors on that really good used figure you grabbed at Historicon ten years ago but havent touched since 
