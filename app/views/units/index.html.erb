@@ -1,19 +1,21 @@
 <h1> Your Units </h1> 
-<table> 
-<tr>
-    <th> Name </th> 
-    <th> Description </th> 
-</tr>
+
+    <strong> Name </strong> 
+    <strong> Description </strong> 
+
 <% if @units then%>
 <% @units.each do |unit| %> 
-<tr>
-<td><%= image_tag unit.photo.url(:thumb) %> </td>
-<td><%= link_to unit.name, edit_unit_path(unit) %></td>
-<td><%= unit.descr %></td>
-<td><%= link_to 'Destroy This Unit', unit_path(unit), method: :delete%> </td>
-</tr>
+    <%= div_for unit do %> 
+    <p> 
+        <div class = "actions">
+<%= image_tag unit.photo.url(:thumb) %>
+<%= link_to unit.name, edit_unit_path(unit) %>
+<%= unit.descr %>
+<%= link_to 'Destroy This Unit', unit_path(unit), method: :delete, remote: true%> 
+    </p>
+    </div>
+<% end %>
 <% end %>
 <% else %> 
 You don't seem to have any units to show
 <% end %> 
-</table>
