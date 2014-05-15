@@ -11,7 +11,7 @@
 <%= image_tag unit.photo.url(:thumb) %>
 <%= link_to unit.name, edit_unit_path(unit) %>
 <%= unit.descr %>
-<%= link_to 'Destroy This Unit', unit_path(unit), method: :delete, remote: true%> 
+<%= link_to 'Destroy', unit_path(unit), class: "button alert", method: :delete, remote: true%> 
     </p>
     </div>
 <% end %>

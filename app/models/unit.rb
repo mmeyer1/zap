@@ -7,7 +7,9 @@ class Unit < ActiveRecord::Base
     thumb: '100x100>',
     square: '200x200#',
     medium: '300x300>'
-  }
+  },
+  :default_style => :thumb,
+  :default_url => '/pub_images/units/sadface.png'
 
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
