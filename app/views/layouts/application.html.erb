@@ -22,24 +22,52 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h2><%= link_to "ZAP!", welcome_index_path %></a></h2>
+        </li>
+      </ul>
+      <section class = "top-bar-section">
+        <ul class = "right">
+          <li class="divider"></li>
+          <% if user_signed_in? %> 
+          <li class="has-dropdown">
+        <a href="#">Unit Management</a>
+        <ul class= "dropdown">
+          <li><%= link_to "Your Units", units_path %></li>
+          <li><%= link_to "Create Unit", new_unit_path %></li>
+        </ul>
+      </li>
+        <li class="divider"></li>
+<li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+<li class="divider"></li>
+<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li> 
+
+<% else %> 
+<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+<li class="divider"></li>
+<li><%= link_to 'Login!', new_user_session_path %></li> 
+<% end %> 
+        </ul>
+      </div>
+    </nav>
 <% if notice %> 
     <p class = "alert alert-success"><%= notice %></p> 
 <% end %>
 <% if alert %> 
     <p class = "alert alert-danger"><%= alert %></p>
 <% end %> 
-
+<div class="row">
+  <div class="large-10 columns">
 <%= yield %>
+  </div>
+  <div class = "large-2 columns">
+    <h3>Lorem Ipsum</h3>
+    <p> This is where the social networking stuff will go</p>
+  </div>
+</div>
 
-<% if user_signed_in? %> 
-Logged in as <strong><%= current_user.email %></strong>
-<%= link_to 'Edit Profile', edit_user_registration_path %> 
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %> 
-<%= link_to 'Your Units', units_path %>
-<% else %> 
-<%= link_to 'Sign_Up', new_user_registration_path %> 
-<%= link_to 'Login!', new_user_session_path %> 
-<% end %> 
     <%= javascript_include_tag "application" %>
   </body>
 </html>
