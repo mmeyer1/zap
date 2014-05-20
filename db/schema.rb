@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511032659) do
+ActiveRecord::Schema.define(version: 20140520221541) do
+
+  create_table "paints", force: true do |t|
+    t.string   "color"
+    t.string   "company"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "unit_colors", force: true do |t|
+    t.integer  "unit_id"
+    t.integer  "paint_id"
+    t.string   "technique"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "units", force: true do |t|
     t.string   "name"
