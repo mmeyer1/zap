@@ -15,8 +15,7 @@ Basic styling added with Foundation.
 Added a persistent navbar/some AJAX for basic actions (particularly on the unit index page). 
 
 Next Goal: Create the Paint resource, Paint will be an open source library of known paint colors, I'd like to seed it somehow with data
-on the basic GW/Vallejo/P3 ranges but leave functionality for users to add new colors. Will be associated to units through a 
-has_and_belongs_to_many relationship (at least, I think). 
+on the basic GW/Vallejo/P3 ranges but leave functionality for users to add new colors. Will be associated to units through the join table unit_colors (this is a has-many-through deal)
 
 Future:
 
