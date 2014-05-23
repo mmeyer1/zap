@@ -4,7 +4,7 @@ class Unit < ActiveRecord::Base
     validates :user_id, presence: true
 
     has_many :unit_colors
-    has_many :units, through: :unit_colors
+    has_many :paints, through: :unit_colors
     has_attached_file :photo, styles: {
     thumb: '100x100>',
     square: '200x200#',
