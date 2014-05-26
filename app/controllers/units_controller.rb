@@ -10,7 +10,7 @@ def create
     if @unit.save
     redirect_to @unit
     else
-    flash[:alert]
+    flash[:alert] = "Error saving Unit"
     render 'new'
     end
 end 
@@ -29,7 +29,7 @@ def update
 if @unit.update(unit_params)
     redirect_to @unit
 else
-    flash[:alert]
+    flash[:alert] = "Couldn't Update Unit"
     render 'edit'
 end
 end
