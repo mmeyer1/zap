@@ -4,7 +4,7 @@ class PaintsController < ApplicationController
     end 
 
     def create 
-        @paint = Paint.new
+        @paint = Paint.new(params[:id])
 
         if @paint.save
          redirect_to get_current_unit

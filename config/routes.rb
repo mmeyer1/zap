@@ -8,7 +8,7 @@ Zap::Application.routes.draw do
   root 'welcome#index'
 
 resources :units do 
-  resources :unit_colors 
+  resources :paints 
 end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

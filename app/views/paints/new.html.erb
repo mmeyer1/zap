@@ -1,0 +1,14 @@
+<h1> Paints for Your Unit </h1>
+<%= form_for (@paint) do |f| %> 
+<p> 
+    <%= f.label :color %> 
+    <%= f.text_field :color %> 
+</p> 
+<p> 
+    <%= f.label :company %> 
+    <%= f.text_field :company %> 
+</p> 
+<p>
+<%= f.submit %> 
+</p> 
+<% end %> 
