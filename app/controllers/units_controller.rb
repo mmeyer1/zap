@@ -9,8 +9,8 @@ def create
     
     if @unit.save
     redirect_to new_unit_paint_path(@unit)
-    flash[:alert] = "Error saving Unit"
 else
+    flash[:alert] = "Error saving Unit"
     render 'new'
     end
 end 
