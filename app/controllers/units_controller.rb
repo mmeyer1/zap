@@ -6,24 +6,24 @@ end
 
 def create
     @unit = current_user.units.new(unit_params)
-    
+
     if @unit.save
     redirect_to new_unit_paint_path(@unit)
 else
-    flash[:alert] = "Error saving Unit"
+    flash[:alert] = "#{@unit.errors.full_messages}"
     render 'new'
     end
-end 
+end
 
 def show
     @unit = current_user.units.find(params[:id])
-end 
+end
 
-def edit 
+def edit
 @unit = current_user.units.find(params[:id])
 end
 
-def update 
+def update
 @unit = current_user.units.find(params[:id])
 
 if @unit.update(unit_params)
